@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "@apollo/client": "^3.10.5",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
+    "graphql": "^16.8.2",
+    "react": "^18.3.1",
+    "react-dom": "latest",
+    "react-router-dom": "^6.23.1",
+    "react-window": "^1.8.10",
+    "typescript": "latest"
+  },
+  "description": "https://github.com/mui/material-ui/blob/v5.15.19/docs/data/joy/templates/files/App.tsx",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-window": "^1.8.8",
+    "react-scripts": "latest"
+  },
+  "main": "index.tsx",
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

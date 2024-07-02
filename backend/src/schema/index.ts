@@ -1,4 +1,4 @@
-export const typeDefs = `#graphql
+export const typeDefs = `
   type Book {
     title: String
     author: String
@@ -6,7 +6,15 @@ export const typeDefs = `#graphql
     readingLevel: String
   }
 
-  type Query {
+  type BookResponse {
+    count: Int
     books: [Book]
+  }
+
+
+  type Query {
+    books(limit: Int, offset: Int): [Book]
+    total: Int
+    searchBooks(searchTerm: String!, limit: Int, offset: Int): [Book]
   }
 `;
