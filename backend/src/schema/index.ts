@@ -7,14 +7,15 @@ export const typeDefs = `
   }
 
   type BookResponse {
-    count: Int
+    total: Int
     books: [Book]
   }
 
 
   type Query {
-    books(limit: Int, offset: Int): [Book]
+    books(readingLevel: String,limit: Int, offset: Int): BookResponse
     total: Int
     searchBooks(searchTerm: String!, limit: Int, offset: Int): [Book]
+    readingLevels: [String]
   }
 `;

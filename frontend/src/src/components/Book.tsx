@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { addBookToList, bookExistsInList, removeBookFromList } from './utils';
+import { Divider } from '@mui/material';
 
 export type BookType = {
     author: string,
@@ -42,14 +43,19 @@ export default function Book(props: BookProps) {
 
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{
+            minHeight: 400,
+            minWidth: 200,
+            maxHeight: 250,
+            maxWidth: 300
+        }}>
             <CardMedia
-                sx={{ height: 140 }}
+                sx={{ height: 175 }}
                 image={coverPhotoURL}
                 title={title}
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                     {title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
