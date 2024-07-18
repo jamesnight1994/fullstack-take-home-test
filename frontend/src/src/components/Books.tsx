@@ -62,16 +62,18 @@ function Books({ readingLevel }: BookProps) {
         color: theme.palette.text.secondary,
     }));
 
+    
+    if (loading) return <>LOADING...</>;
+    
     if (error) return <>ERROR...</>;
 
-    if (loading) return <>LOADING...</>;
 
     return (
-        <Box sx={{ margin:"auto",paddingLeft: 5,border: '1px solid lightgrey' }}>
+        <Box sx={{ margin: "auto", paddingLeft: 5, border: '1px solid lightgrey' }}>
             <Box>
                 <Typography sx={{
-                border: '1px solid lightgrey',
-                
+                    border: '1px solid lightgrey',
+
                 }} variant='h5'>
                     Reading Level: {readingLevel}
 

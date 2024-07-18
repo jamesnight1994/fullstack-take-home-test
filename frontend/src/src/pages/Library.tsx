@@ -5,7 +5,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Book, { BookProps, BookType } from '../components/Book';
 import Box from '@mui/material/Box';
-import { Stack, Typography, Pagination, IconButton, Tooltip, Button, ButtonGroup, MobileStepper } from '@mui/material';
+import { Stack, Typography, Pagination, IconButton, Tooltip, Button, ButtonGroup, MobileStepper, Backdrop, CircularProgress } from '@mui/material';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import Books from '../components/Books';
 
@@ -40,7 +40,16 @@ const Library = () => {
   const { loading, error, data } = useQuery(GET_READINGLEVELS);
 
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    return (
+      <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={loading}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    );
+  }
   if (error) return <p>Error :</p>;
 
   const readingLevels: string[] = data.readingLevels
